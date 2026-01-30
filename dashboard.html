@@ -1,46 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #1cc88a, #4e73df);
-      color: white;
-      text-align: center;
-      padding-top: 100px;
-    }
-    .card {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      padding: 40px;
-      border-radius: 15px;
-      width: 400px;
-      margin: auto;
-    }
-    button {
-      padding: 10px 20px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-  </style>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="login-page">
 
-  <div class="card">
-    <h1>🎓 Student Dashboard</h1>
+  <div class="login-card">
+    <h2>🎓 Student Dashboard</h2>
     <p>You are logged in successfully!</p>
-    <button onclick="logout()">Logout</button>
+
+    <h3>Student List</h3>
+    <ul id="studentList" style="text-align:left; margin-top:10px;"></ul>
+
+    <button onclick="logoutUser()">Logout</button>
   </div>
 
-  <script>
-    function logout() {
-      localStorage.clear();
-      window.location.href = "index.html";
-    }
-  </script>
-
+  <script src="dashboard.js"></script>
 </body>
 </html>
